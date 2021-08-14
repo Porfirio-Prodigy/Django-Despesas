@@ -2,7 +2,7 @@
 # 1 Site desenvolvido em Django
 
 ## Create
-![Create](./imagens/tela-1.png)
+![Create](https://github.com/Porfirio-Prodigy/Django-Despesas/blob/main/images/tela-1.png)
 
 ## Read
 ![Read](./imagens/tela-2.png)
