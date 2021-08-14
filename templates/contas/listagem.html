@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>READ</title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        
+        <header>
+            <!-- A grey horizontal navbar that becomes vertical on small screens -->
+            <nav class="navbar navbar-expand-sm bg-dark">
+
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/">Index</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-success" href="criar">Create</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="listar" href="#">Read</a>
+                </li>
+            </ul>
+            
+            </nav>
+        </header>
+        
+        <main class="text-center">
+            <div class="container mt-5">
+                <h2>Extrato</h2>                
+                <table class="table table-striped table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Valor</th>
+                      <th>Despesa</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                    {% for transacao in transacoes %}
+                      <td>
+                        <li>
+                            <a href="{% url 'url_update' transacao.id %}"> 
+                            {{ transacao.descricao }}
+                            </a>
+                        </li>
+                      </td>
+                      <td>
+                          <li>{{ transacao.valor }}</li>
+                      </td>
+                      <td>
+                          <li>{{ transacao.categoria }}</li>
+                      </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+                
+              </div>
+        </main>
+        
+    </body>
+</html>
