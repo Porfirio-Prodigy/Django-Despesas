@@ -2,8 +2,8 @@
 # 1 Site desenvolvido em Django
 
 ## Create
-![Create](imagens/tela-1)
+![Create](/imagens/tela-1.png)
 
 ## Read
-![Read](imagens/tela-2)
+![Read](/imagens/tela-2.png)
 
